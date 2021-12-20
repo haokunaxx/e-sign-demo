@@ -1,0 +1,125 @@
+@import '../../css/variables.scss';
+@import '../../css/mixins.scss';
+.sign-wrap{
+    height: 100%;
+    width: 100%;
+    padding-top: .46rem;
+    @include flex-h;
+    .func-wrap{
+        position: relative;
+        width: .6rem;
+        flex-shrink: 0;
+        background-color: #fbfaf9;
+        height: 100%;
+        .group-color-picker,
+        .group-font-size-picker{
+            width: 100%;
+            .list{
+                width: 100%;
+                @include flex-v;
+                // justify-content: space-around;
+                align-items: center;
+                .item{
+                    position: relative;
+                    width: .3rem;
+                    height: .3rem;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    background-color: #000;
+                    margin: .12rem 0;
+                }
+
+            }
+        }
+        .group-color-picker{
+            .list{
+                .item{
+                    &:nth-child(3){
+                        background-color: #FF3B30;
+                        margin-bottom: 0;
+                    }
+                    &:nth-child(2){
+                        background-color: #2c82fd;
+                    }
+                    // &.checked::after{
+                    //     content:'';
+                    //     display: block;
+                    //     position: absolute;
+                    //     left: 0;
+                    //     top: 0;
+                    //     background-color: rgba(#000,.2);
+                    //     width: 100%;
+                    //     height: 100%;
+                    // }
+                    &.checked::after{
+                        content:'';
+                        display: block;
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        // background-color: rgba(#fff,.6);
+                        width: .12rem;
+                        height: .06rem;
+                        transform: translate3d(-30%,-50%,0) rotate(45deg);
+                        border: .03rem solid transparent;
+                        border-left-color: #fff;
+                        border-bottom-color: #fff;
+                    }
+                }
+            }
+        }
+        .group-font-size-picker{
+            margin-top: .12rem;
+            .list{
+                .item{
+                    border-radius: .04rem;
+                    background-color: #fff;
+                    font-size: 10px;
+                    border: .01rem solid #ddd;
+                    @include flex-h;
+                    @include vh-center;
+                    transform: rotate(90deg);
+                    &.checked{
+                        color: #fff;
+                        background-color: rgba($mainColor,1);
+                    }
+                }
+            }
+        }
+        .group-confirm-rewrite{
+            position: absolute;
+            bottom: 2.4rem;
+            transform-origin: left;
+            transform: rotate(90deg) translateY(-.3rem);
+            .list{
+                @include flex-h;
+                .item{
+                    width: 1rem;
+                    height: .4rem;
+                    @include flex-h;
+                    @include vh-center;
+                    border-radius: .04rem;
+                    border: .01rem solid #ddd;
+                    background-color: $mainColor;
+                    color: #fff;
+                    font-size: 12px;
+                    &:nth-child(1){
+                        color: #000;
+                        margin-right: .2rem;
+                        background-color: #fff;
+                    }
+                    // transform: rotate(90deg);
+                }
+            }
+        }
+    }
+    .canvas-wrap{
+        width: 100%;
+        height: 100%;
+        .canvas{
+            height: 100%;
+            width: 100%;
+            background-color: #eee;
+        }
+    }
+}

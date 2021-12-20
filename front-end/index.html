@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title id="headTitle"><%= htmlWebpackPlugin.options.title %></title>
+    <script type="text/javascript">
+        function resize(){
+            document.documentElement.style.fontSize = window.innerWidth / 3.65 + 'px'
+        }
+        window.addEventListener('resize',resize,false)
+        resize()
+    </script>
+    <link rel="stylesheet" href="static/css/pdfh5.css">
+</head>
+<body>
+    <div id="container">
+        <!-- <div id="preview"></div> -->
+    </div>
+    <div id="sign-page">
+        
+    </div>
+    <!-- <footer class="footer"></footer> -->
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/pdf.js"></script>
+    <script src="static/js/pdf.worker.js"></script>
+    <script src="static/js/pdfh5.js"></script>
+    <!-- <script src="dist/static/js/jquery.min.js"></script> -->
+    <!-- <script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+</body>
+</html>

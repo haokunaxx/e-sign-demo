@@ -1,0 +1,23 @@
+@import '../../css/mixins.scss';
+.header{
+    position: absolute;
+    height: .45rem;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: #fff;
+    border-bottom: .01rem solid #eee;
+    @include flex-h;
+    @include vh-center;
+    z-index: 10;
+    .back-func{
+        position: absolute;
+        left: .12rem;
+        height: 100%;
+        @include flex-h;
+        @include vh-center;
+    }
+    .title{
+        font-size: 18px;
+    }
+}

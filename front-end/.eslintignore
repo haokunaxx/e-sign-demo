@@ -1,0 +1,9 @@
+/dist/
+/node_modules/
+/static-copy/
+/UseTouch_Project/
+static/
+.vscode
+webpack.prod.js
+webpack.common.js
+webpack.dev.js

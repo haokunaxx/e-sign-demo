@@ -1,0 +1,31 @@
+@import '../../css/mixins.scss';
+.datepicker-wrap{
+    position: fixed;
+    bottom: -3rem;
+    left: 0;
+    right: 0;
+    height: 3rem;
+    border-radius: .12rem .12rem 0 0;
+    background-color: #fff;
+    overflow: hidden;
+    z-index: 13;
+    transition: transform .3s ease-in-out;
+    &.show{
+        // bottom: 0
+        transform: translate3d(0,-100%,0)
+    }
+    .candidate-list{
+        .candidate-item{
+            @include flex-h;
+            @include vh-center;
+            height: .5rem;
+            border-bottom: .005rem solid #eee;
+        }
+    }
+    .cancel{
+        @include flex-h;
+        @include vh-center;
+        width: 100%;
+        height: .5rem;
+    }
+}
